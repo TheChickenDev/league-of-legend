@@ -12,6 +12,7 @@ function App() {
 
                         return (
                             <Route
+                                key={index}
                                 path={item.path}
                                 element={
                                     <DefaultLayout>

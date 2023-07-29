@@ -1,0 +1,9 @@
+.wrapper {
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    bottom: 0;
+    width: 484px;
+    background-color: blue;
+    display: none;
+}
