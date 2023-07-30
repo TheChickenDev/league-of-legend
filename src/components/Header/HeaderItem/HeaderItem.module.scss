@@ -55,8 +55,13 @@
 }
 
 .hideOnSmallPC,
-.hideOnTablet {
+.hideOnTablet,
+.hideOnSearch {
     display: none;
+}
+
+.showOnSearch {
+    display: block;
 }
 
 .item-child {

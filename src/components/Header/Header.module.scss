@@ -25,18 +25,52 @@
     align-items: center;
 }
 
+// Search function
+
 .search {
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #2b2a29;
+    border-radius: 45px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.search-btn {
+    width: 60px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
     font-size: 2rem;
     cursor: pointer;
-    margin: 10px;
+    margin: 0;
     color: var(--white);
+}
+
+.search-input {
+    background-color: transparent;
+    caret-color: var(--white);
+    color: var(--white);
+    font-family: 'Beaufort for LOL';
+    font-size: 1.6rem;
+    padding: 12px 0;
+    letter-spacing: 1.5px;
+    transition: width ease 1s;
+}
+
+.search-close-btn {
+    width: 60px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    font-size: 1.6rem;
+    color: #7e7e7e;
+    cursor: pointer;
 }
 
 .warning {
@@ -73,13 +107,28 @@
 // Warning popup menu
 
 .warning-popup {
+    &::after {
+        --arrow-size: 10px;
+        content: '';
+        display: block;
+        position: absolute;
+        top: calc(0px - var(--arrow-size));
+        left: 50%;
+        transform: translateX(-50%);
+        border-left: var(--arrow-size) solid transparent;
+        border-right: var(--arrow-size) solid transparent;
+        border-bottom: var(--arrow-size) solid var(--white);
+    }
+}
+
+.warning-items {
     background-color: var(--white);
     color: var(--black);
     width: 280px;
     padding: 24px;
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.2);
     border-radius: 2px;
-    font-family: 'RixSGoL';
+    font-family: 'Beaufort for LOL';
 }
 
 .warning-item {
@@ -151,6 +200,21 @@
 // Languages popup menu
 
 .languages-popup {
+    &::after {
+        --arrow-size: 10px;
+        content: '';
+        display: block;
+        position: absolute;
+        top: calc(0px - var(--arrow-size));
+        left: 50%;
+        transform: translateX(-50%);
+        border-left: var(--arrow-size) solid transparent;
+        border-right: var(--arrow-size) solid transparent;
+        border-bottom: var(--arrow-size) solid var(--white);
+    }
+}
+
+.languages-items {
     background-color: var(--white);
     color: var(--black);
     width: 220px;
@@ -159,21 +223,10 @@
     padding: 12px 24px;
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.2);
     border-radius: 2px;
-    font-family: 'RixSGoL';
+    font-family: 'Beaufort for LOL';
     display: flex;
     flex-direction: column;
     position: relative;
-
-    &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 10px;
-        left: 50%;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-bottom: 10px solid blue;
-    }
 }
 
 .languages-item {

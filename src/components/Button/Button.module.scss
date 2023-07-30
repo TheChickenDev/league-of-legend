@@ -1,0 +1,25 @@
+.btn {
+    background-color: rgba(128, 128, 128, 0.2);
+    color: #f9f9f9;
+    padding: 8px 16px;
+    border-radius: 6.4px;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    height: 32px;
+    line-height: 18px;
+
+    &.blueRound {
+        background-color: #0bc5e2;
+        color: #111111;
+        border-radius: 12.8px;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+}
+
+.btn ~ .btn {
+    margin-left: 10px;
+}
