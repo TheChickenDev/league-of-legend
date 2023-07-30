@@ -13,6 +13,7 @@
     letter-spacing: 2px;
     border-radius: 4px;
     position: relative;
+    color: var(--white);
 
     &:hover {
         background-color: #8080804d;
@@ -62,6 +63,7 @@
     min-width: 150px;
     padding: 8px 16px;
     border-radius: 4px;
+    color: var(--white);
 
     &:hover {
         background-color: #8080804d;

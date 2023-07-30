@@ -8,7 +8,7 @@ import { Fragment } from 'react';
 
 const cx = classNames.bind(styles);
 
-function HeaderItem({ link, popupItems, tabletResponsive, children }) {
+function HeaderItem({ link, popupItems, tabletResponsive, path, children }) {
     const TagName = popupItems ? HeadlessTippy : Fragment;
 
     return (
@@ -42,7 +42,7 @@ function HeaderItem({ link, popupItems, tabletResponsive, children }) {
                     </div>
                 )}
             >
-                <Link className={cx('content')}>
+                <Link className={cx('content')} to={path}>
                     {children}
                     {(popupItems && <FontAwesomeIcon className={cx('icon')} icon={faCaretDown} />) ||
                         (link && <FontAwesomeIcon className={cx('icon')} icon={faUpRightFromSquare} />)}

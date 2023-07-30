@@ -31,5 +31,10 @@ body {
 [to],
 [href] {
     text-decoration: none;
-    color: var(--white);
+}
+
+button,
+input {
+    border: none;
+    outline: none;
 }
