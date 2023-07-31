@@ -1,3 +1,14 @@
 .wrapper {
     display: flex;
 }
+
+.space {
+    width: 10px;
+    background-color: transparent;
+}
+
+@media (max-width: 1023px) {
+    .wrapper {
+        display: none;
+    }
+}

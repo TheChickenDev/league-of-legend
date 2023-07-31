@@ -60,10 +60,6 @@
     display: none;
 }
 
-.showOnSearch {
-    display: block;
-}
-
 .item-child {
     min-width: 150px;
     padding: 8px 16px;
@@ -72,6 +68,10 @@
 
     &:hover {
         background-color: #8080804d;
+    }
+
+    &.showOnSearch {
+        display: block;
     }
 }
 

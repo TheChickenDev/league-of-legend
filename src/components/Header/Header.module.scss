@@ -5,12 +5,18 @@
     width: 100%;
     height: 80px;
     background-color: var(--primary);
-    padding: 0 36px 0 32px;
-    // position: fixed;
+    padding: 0 32px;
+    position: fixed;
+    z-index: 100;
 }
 
 .logo {
     padding: 16px;
+}
+
+.logoLOL {
+    padding: 16px;
+    display: none;
 }
 
 .items {
@@ -52,7 +58,6 @@
 
 .search-input {
     background-color: transparent;
-    caret-color: var(--white);
     color: var(--white);
     font-family: 'Beaufort for LOL';
     font-size: 1.6rem;
@@ -248,4 +253,24 @@
 
 .languages-item.active {
     color: #c4202b;
+}
+
+// Responsive
+
+@media (max-width: 1023px) {
+    .search,
+    .logo {
+        display: none;
+    }
+
+    .logoLOL {
+        display: block;
+    }
+
+    .items {
+        display: none;
+    }
+    .wrapper {
+        padding: 32px 16px;
+    }
 }

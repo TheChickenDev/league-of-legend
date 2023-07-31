@@ -7,7 +7,18 @@ import PatchNotes from '../pages/PatchNotes';
 import Shop from '../pages/Shop';
 import Support from '../pages/Support';
 
-export const routes = [
+const paths = {
+    Home: '/',
+    Champions: '/champions',
+    Discover: '/discover',
+    Game: '/game',
+    News: '/news',
+    PatchNotes: '/patchnotes',
+    Shop: '/shop',
+    Support: '/Support',
+};
+
+const routes = [
     {
         path: '/',
         component: Home,
@@ -41,3 +52,5 @@ export const routes = [
         component: Support,
     },
 ];
+
+export { routes, paths };

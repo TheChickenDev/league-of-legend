@@ -1,6 +1,6 @@
 const images = {
     logo: require('./logo.svg').default,
-    logoHTML: require('./logoLMHT.svg').default,
+    logoLOL: require('./logoLOL.svg').default,
 };
 
 export default images;

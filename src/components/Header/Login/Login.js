@@ -8,6 +8,7 @@ function LoginFunction() {
     return (
         <div className={cx('wrapper')}>
             <Button>SIGN IN</Button>
+            <div className={cx('space')}></div>
             <Button blueRound>PLAY NOW</Button>
         </div>
     );
