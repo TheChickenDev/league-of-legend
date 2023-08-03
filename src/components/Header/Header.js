@@ -165,7 +165,6 @@ function Header() {
                         ]}
                     >
                         More
-                        {console.log(showSearchInput)}
                     </HeaderItem>
                 </div>
                 <div className={cx('functions')}>

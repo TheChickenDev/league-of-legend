@@ -182,9 +182,11 @@ function Sidebar() {
                     </Link>
                 </div>
                 <div className={cx('btns')}>
-                    <Button fullWidth>SIGN IN</Button>
+                    <Button fullWidth round>
+                        SIGN IN
+                    </Button>
                     <br />
-                    <Button fullWidth blueRound>
+                    <Button fullWidth blue round>
                         PLAY NOW
                     </Button>
                 </div>

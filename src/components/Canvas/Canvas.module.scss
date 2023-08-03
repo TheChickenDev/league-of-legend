@@ -1,0 +1,43 @@
+.btnAnimation {
+    position: absolute;
+    z-index: 2;
+    width: 106%;
+    height: 120%;
+    top: -10%;
+    left: -3%;
+    background-color: transparent;
+    animation: opacity 1.5s linear;
+}
+
+.boundingAnimation {
+    position: absolute;
+    z-index: 2;
+    width: calc(100% - 20px);
+    max-width: calc(100% - 20px);
+    height: calc(100% + 20px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    display: block;
+    image-rendering: pixelated;
+    will-change: transform;
+    animation: opacity 1.5s linear;
+}
+
+@keyframes opacity {
+    from {
+        visibility: hidden;
+        opacity: 0;
+    }
+    to {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 639px) {
+    .boundingAnimation {
+        display: none;
+    }
+}
