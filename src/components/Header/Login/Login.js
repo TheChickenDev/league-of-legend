@@ -9,7 +9,7 @@ function LoginFunction() {
         <div className={cx('wrapper')}>
             <Button round>SIGN IN</Button>
             <div className={cx('space')}></div>
-            <Button blue round>
+            <Button blue round blackText>
                 PLAY NOW
             </Button>
         </div>

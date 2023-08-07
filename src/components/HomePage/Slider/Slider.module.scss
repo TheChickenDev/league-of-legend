@@ -1,6 +1,7 @@
 .wrapper {
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .blur-video {
@@ -93,16 +94,14 @@
     padding: 0 64px;
 }
 
-.news-title {
+.news-label {
     transform: rotate(-90deg);
-    width: fit-content;
-    white-space: nowrap;
     color: rgb(28, 29, 42);
     font-size: 1rem;
     letter-spacing: 3px;
     position: absolute;
-    top: 80px;
-    left: -44px;
+    top: 200px;
+    left: -36px;
     z-index: 100;
 }
 
@@ -115,6 +114,7 @@
     position: relative;
     overflow: hidden;
     transition: transform 0.5s;
+    cursor: grabbing;
 
     &#tablet-slider {
         display: none;
@@ -185,9 +185,9 @@
         padding: 0 10px;
     }
 
-    .news-title {
+    .news-label {
         transform: none;
-        top: -50px;
+        top: 50px;
         left: 20px;
     }
 }

@@ -186,7 +186,7 @@ function Sidebar() {
                         SIGN IN
                     </Button>
                     <br />
-                    <Button fullWidth blue round>
+                    <Button fullWidth blue round blackText>
                         PLAY NOW
                     </Button>
                 </div>

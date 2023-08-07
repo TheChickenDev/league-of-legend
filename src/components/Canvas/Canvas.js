@@ -6,7 +6,6 @@ const cx = classNames.bind(styles);
 
 function Canvas({ draw, btnAnimation, imgAnimation, boundingAnimation }) {
     const ref = useCanvas(draw);
-
     return <canvas ref={ref} className={cx({ btnAnimation, imgAnimation, boundingAnimation })}></canvas>;
 }
 

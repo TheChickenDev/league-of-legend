@@ -16,6 +16,34 @@
     &.big {
         width: 195px;
         height: 56px;
+
+        & ~ .big {
+            margin-left: 20px;
+        }
+    }
+
+    &.medium {
+        --defect-border: 10px;
+        width: 220px;
+        height: 30px;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: clip-path 0.15s linear;
+        clip-path: polygon(
+            var(--defect-border) 0,
+            100% 0,
+            100% calc(100% - var(--defect-border)),
+            calc(100% - var(--defect-border)) 100%,
+            0 100%,
+            0 var(--defect-border)
+        );
+        &:hover {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 0);
+        }
+
+        & ~ .medium {
+            margin-left: 20px;
+        }
     }
 
     &.fullWidth {
@@ -25,7 +53,6 @@
 
     &.blue {
         background-color: rgba(11, 197, 226, 0.9);
-        color: #111111;
 
         &:hover {
             background-color: rgb(11, 197, 226);
@@ -33,7 +60,15 @@
     }
 
     &.yellow {
-        background-color: #d0a85c;
+        background-color: rgb(208, 168, 92, 0.9);
+
+        &:hover {
+            background-color: rgb(208, 168, 92);
+        }
+    }
+
+    &.blackText {
+        color: #111111;
     }
 }
 

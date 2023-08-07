@@ -6,24 +6,20 @@ function useCanvas(draw) {
     useEffect(() => {
         const canvas = ref.current;
         const ctx = canvas.getContext('2d');
-        const rect = canvas.getBoundingClientRect();
-        let count = 0;
-
-        canvas.width = rect.width * devicePixelRatio;
-        canvas.height = rect.height * devicePixelRatio;
-
-        ctx.scale(devicePixelRatio, devicePixelRatio);
-
-        canvas.style.width = rect.width + 'px';
-        canvas.style.height = rect.height + 'px';
 
         let animationID;
 
         const renderer = () => {
+            const rect = canvas.getBoundingClientRect();
+            canvas.width = rect.width * devicePixelRatio;
+            canvas.height = rect.height * devicePixelRatio;
+
+            ctx.scale(devicePixelRatio, devicePixelRatio);
+
+            canvas.style.width = rect.width + 'px';
+            canvas.style.height = rect.height + 'px';
             draw(ctx, rect);
-            count++;
-            if (count < 50) animationID = window.requestAnimationFrame(renderer);
-            else window.cancelAnimationFrame(animationID);
+            window.requestAnimationFrame(renderer);
         };
 
         renderer();

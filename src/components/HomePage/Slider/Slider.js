@@ -1,6 +1,6 @@
 import styles from './Slider.module.scss';
 import classNames from 'classnames/bind';
-import logo from '../../../assets/imgs/logo-en-us.png';
+import images from '../../../assets/imgs';
 import Button from '../../Button';
 import SliderItem from './SliderItem/SliderItem';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,22 +13,22 @@ const cx = classNames.bind(styles);
 const news = [
     {
         img: 'https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt9542bf1619f1fb75/64c2f635c26b1a57fdc0ccd7/TFT_13_15_Banners.jpg?quality=90&crop=1%3A1&width=720',
-        label: 'cập nhật trò chơi',
-        title: 'đấu trường chân lý - thông tin bản cập nhật 13.15',
+        label: 'Game Updates',
+        title: 'Teamfight Tactics patch 13.15 notes',
         content:
-            'Bản cập nhật 13.15 sẽ mang tới một Cổng Dịch Chuyển Khu Vực mới, Đại Sảnh Cửu Trụ, bản làm lại của Sa Mạc Lưu Động và Piltover CŨNG NHƯ một vài cập nhật cân bằng nhỏ. Xin lưu ý, đây là bản cập nhật cuối cùng mà Tinh Võ Đấu Trường và Sàn Đấu Choncc còn hoạt động, vậy nên hãy nhớ hoàn thành vé sự kiện nhé!',
+            '13.15 brings an all new Region Portal, The Hall Of The Nine, reworks to Shifting Sands and Piltover, AND a few lighter balance changes. As a reminder, this is our last patch with Soul Brawl and the Choncc Dome available, so finish up that event pass!',
     },
     {
-        img: 'https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltc897fdbf35b82952/64c17a667b7f98fe3b9ff44d/00HeaderJhin.jpg?quality=90&crop=1%3A1&width=720',
-        label: 'đội ngũ phát triển',
-        title: 'TÓM TẮT: cập nhật giữa năm từ đội ngũ phát triển',
-        content: 'Tóm tắt ngắn gọn về các cập nhật từ Riot Brightmoon và Meddler.',
+        img: 'https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt9814bd5d2bf9e3c6/64bb247d15da40b696f8b962/TFT_SOUL23_ArticleBanner_MiniCine_1920x1080_v002.jpg?quality=90&crop=1%3A1&width=240',
+        label: 'Media',
+        title: 'The Choncc Dome Event',
+        content: 'TFT’s first event on both PC and mobile runs from July 19 until August 15!',
     },
     {
         img: 'https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blta48b9e50d325e94c/64be11201add4db8a8fbbb86/Soul-Fighter-Samira---Final.jpg?quality=90&crop=1%3A1&width=720',
-        label: 'cập nhật trò chơi',
-        title: 'hướng dẫn cosplay tinh võ sư: vòng 1',
-        content: 'Hóa thân vào Linh Hồn của những Võ Sư ngày bằng trang phục cosplay của bạn!',
+        label: 'Dev',
+        title: 'TL;DW: Mid-Year Check-In Dev Update',
+        content: 'A short rundown of updates from Riot Brightmoon and Meddler.',
     },
 ];
 
@@ -77,6 +77,14 @@ function Slider() {
                         type="video/webm"
                     />
                 </video>
+                <div className={cx('logo')}>
+                    <div className={cx('logo-img')}>
+                        <img src={images.logo} alt="LeagueOfLegend" />
+                    </div>
+                    <Button big blue blackText>
+                        PLAY FOR FREE
+                    </Button>
+                </div>
             </div>
             <div className={cx('main-video', 'hideOnMobile')}>
                 <div className={cx('main-video-container')}>
@@ -90,21 +98,13 @@ function Slider() {
                     <div className={cx('test')}></div>
                 </div>
             </div>
-            <div className={cx('logo')}>
-                <div className={cx('logo-img')}>
-                    <img src={logo} alt="LeagueOfLegend" />
-                </div>
-                <Button big blue>
-                    PLAY FOR FREE
-                </Button>
-            </div>
             <div className={cx('news')}>
+                <div className={cx('news-label')}>
+                    <h4>
+                        FEATURED NEWS <FontAwesomeIcon icon={faMinus} />
+                    </h4>
+                </div>
                 <div className={cx('news-content')}>
-                    <div className={cx('news-title')}>
-                        <h4>
-                            TIN TỨC TIÊU BIỂU <FontAwesomeIcon icon={faMinus} />
-                        </h4>
-                    </div>
                     <div id={cx('tablet-slider')} className={cx('news-items')}>
                         {news.map((item, index) => {
                             return (
@@ -133,7 +133,7 @@ function Slider() {
                     </div>
                     <div className={cx('news-btn')}>
                         <button>
-                            XEM TẤT CẢ
+                            VIEW ALL
                             <FontAwesomeIcon className={cx('news-btn-icon')} icon={faHandPointRight}></FontAwesomeIcon>
                         </button>
                     </div>

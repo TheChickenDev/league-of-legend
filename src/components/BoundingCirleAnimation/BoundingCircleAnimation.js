@@ -46,7 +46,6 @@ function BoundingCircleAnimation() {
 
     useEffect(() => {
         draw();
-        console.log('hello');
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 

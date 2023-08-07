@@ -5,7 +5,7 @@ import Canvas from '../Canvas';
 
 const cx = classNames.bind(styles);
 
-function Button({ blue, yellow, round, big, small, medium, fullWidth, children }) {
+function Button({ blue, yellow, round, big, small, medium, fullWidth, blackText, children }) {
     const [btnHoverBoolen, setBtnHoverBoolen] = useState(false);
     const [drawFunc, setDrawFunc] = useState(() => shrink);
 
@@ -63,14 +63,18 @@ function Button({ blue, yellow, round, big, small, medium, fullWidth, children }
     return (
         (big && (
             <button
-                className={cx('btn', { blue, round, yellow, big, small, medium, fullWidth })}
+                className={cx('btn', { blue, round, yellow, big, small, medium, fullWidth, blackText })}
                 onMouseOver={() => setBtnHoverBoolen(true)}
                 onMouseOut={() => setBtnHoverBoolen(false)}
             >
                 {children}
                 {big && <Canvas draw={drawFunc} btnAnimation></Canvas>}
             </button>
-        )) || <button className={cx('btn', { blue, round, yellow, big, small, medium, fullWidth })}>{children}</button>
+        )) || (
+            <button className={cx('btn', { blue, round, yellow, big, small, medium, fullWidth, blackText })}>
+                {children}
+            </button>
+        )
     );
 }
 
