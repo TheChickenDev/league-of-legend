@@ -3,7 +3,7 @@ import classNames from 'classnames/bind';
 import { Fragment } from 'react';
 import { useState, useEffect } from 'react';
 import svgImages from '../../../../assets/svg';
-import images from '../../../../assets/imgs';
+import images from '../../../../assets/imgs/homepage/champions';
 
 const cx = classNames.bind(styles);
 const renderItems = [
@@ -44,7 +44,6 @@ const renderItems = [
         appellation: 'the radiant dawn',
     },
 ];
-const rollItems = [{}];
 
 function ChampionImage({ renderItem }) {
     const [renderIndex, setRenderIndex] = useState(0);

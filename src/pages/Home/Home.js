@@ -1,4 +1,5 @@
 import Champions from '../../components/HomePage/Champions/';
+import Skins from '../../components/HomePage/Skins';
 import Slider from '../../components/HomePage/Slider';
 import styles from './Home.module.scss';
 import classNames from 'classnames/bind';
@@ -10,6 +11,7 @@ function Home() {
         <div className={cx('wrapper')}>
             <Slider />
             <Champions />
+            <Skins />
         </div>
     );
 }

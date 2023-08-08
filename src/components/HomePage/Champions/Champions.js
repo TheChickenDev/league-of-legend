@@ -22,7 +22,6 @@ function Champions() {
         ctx.lineWidth = 3;
 
         ctx.beginPath();
-        ctx.shadowBlur = 30;
         ctx.arc(
             canvasW / 2,
             canvasH / 2,
