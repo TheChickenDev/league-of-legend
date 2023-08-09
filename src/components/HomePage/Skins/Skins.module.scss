@@ -90,7 +90,6 @@
     right: 10%;
     text-align: center;
     z-index: 201;
-    transition: transform linear 1s;
 }
 
 .header-title {
@@ -226,16 +225,12 @@
 
     .header {
         width: 100%;
-        top: 10%;
+        top: 8%;
         left: 0;
     }
 
     .header-title {
         color: #010101;
-
-        span {
-            font-size: 4.8rem;
-        }
 
         &::before,
         &::after {
@@ -246,5 +241,13 @@
 
     .header-slogan {
         color: #010101;
+    }
+}
+
+@media (max-width: 639px) {
+    .header-title {
+        span {
+            font-size: 4.8rem;
+        }
     }
 }

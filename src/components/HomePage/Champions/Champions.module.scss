@@ -203,13 +203,15 @@
         min-width: 400px;
     }
 
+    .video {
+        display: none;
+    }
+}
+
+@media (max-width: 639px) {
     .header-title {
         span {
             font-size: 4.8rem;
         }
-    }
-
-    .video {
-        display: none;
     }
 }
