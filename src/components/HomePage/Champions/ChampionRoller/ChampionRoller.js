@@ -2,7 +2,7 @@ import styles from './ChampionRoller.module.scss';
 import classNames from 'classnames/bind';
 import { Fragment } from 'react';
 import { useState, useEffect } from 'react';
-import svgImages from '../../../../assets/svg';
+import svgImages from '../../../../assets/svg/homepage/champions';
 import images from '../../../../assets/imgs/homepage/champions';
 
 const cx = classNames.bind(styles);

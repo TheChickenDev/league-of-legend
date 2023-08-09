@@ -3,6 +3,9 @@ import classNames from 'classnames/bind';
 import images from '../../../assets/imgs';
 import Button from '../../Button';
 import SliderItem from './SliderItem/SliderItem';
+import heroVideo from '../../../assets/videos/homepage/hero.webm';
+import heroMobileVideo from '../../../assets/videos/homepage/heroMobile.webm';
+import heroBlurredVideo from '../../../assets/videos/homepage/heroBlurred.webm';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus } from '@fortawesome/free-solid-svg-icons';
 import { faHandPointRight } from '@fortawesome/free-regular-svg-icons';
@@ -66,16 +69,10 @@ function Slider() {
         <div className={cx('wrapper')}>
             <div className={cx('blur-video')}>
                 <video className={cx('hideOnMobile')} autoPlay muted loop>
-                    <source
-                        src="https://www.leagueoflegends.com/static/hero-blurred-7572101a2ce5e003b66483b7fe5c5d36.webm"
-                        type="video/webm"
-                    />
+                    <source src={heroBlurredVideo} type="video/webm" />
                 </video>
                 <video className={cx('mobile-video')} autoPlay muted loop>
-                    <source
-                        src="https://www.leagueoflegends.com/static/hero-mobile-5e6cfa76937624c2bad0db07f9839fcc.webm"
-                        type="video/webm"
-                    />
+                    <source src={heroMobileVideo} type="video/webm" />
                 </video>
                 <div className={cx('logo')}>
                     <div className={cx('logo-img')}>
@@ -89,10 +86,7 @@ function Slider() {
             <div className={cx('main-video', 'hideOnMobile')}>
                 <div className={cx('main-video-container')}>
                     <video autoPlay muted loop>
-                        <source
-                            src="https://www.leagueoflegends.com/static/hero-0632cbf2872c5cc0dffa93d2ae8a29e8.webm"
-                            type="video/webm"
-                        />
+                        <source src={heroVideo} type="video/webm" />
                     </video>
                     <div className={cx('main-video-bounding')}></div>
                     <div className={cx('test')}></div>

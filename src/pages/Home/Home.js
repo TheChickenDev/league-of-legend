@@ -1,6 +1,7 @@
+import Slider from '../../components/HomePage/Slider';
 import Champions from '../../components/HomePage/Champions/';
 import Skins from '../../components/HomePage/Skins';
-import Slider from '../../components/HomePage/Slider';
+import Gamemodes from '../../components/HomePage/Gamemodes';
 import styles from './Home.module.scss';
 import classNames from 'classnames/bind';
 
@@ -12,6 +13,7 @@ function Home() {
             <Slider />
             <Champions />
             <Skins />
+            <Gamemodes />
         </div>
     );
 }

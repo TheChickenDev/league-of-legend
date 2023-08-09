@@ -55,7 +55,7 @@
     height: 100%;
     display: block;
     transform: scale(1.2);
-    animation: clip-path-circle linear 1.2s;
+    animation: imgSlideIn linear 1.2s;
 }
 
 .champion-img-text {
@@ -229,12 +229,12 @@
 
 // Animation
 
-@keyframes clip-path-circle {
-    from {
-        clip-path: circle(0);
+@keyframes imgSlideIn {
+    0% {
+        clip-path: polygon(0% 100%, 0% 100%, 0% 100%);
     }
-    to {
-        clip-path: circle(100%);
+    100% {
+        clip-path: polygon(0% 100%, 0% -100%, 200% 100%);
     }
 }
 

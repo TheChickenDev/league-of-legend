@@ -111,11 +111,11 @@
         content: '';
         display: block;
         height: 100%;
-        background-color: var(--white);
+        background-color: currentColor;
         position: absolute;
         top: 0;
-        left: 30%;
-        right: 30%;
+        left: 0;
+        right: 0;
         clip-path: polygon(0 0, 0 0, 0 0);
         transition: clip-path linear 0.5s;
         animation: clip-path-top ease-out 1.5s;
@@ -125,11 +125,11 @@
         content: '';
         display: block;
         height: 100%;
-        background-color: var(--white);
+        background-color: currentColor;
         position: absolute;
         top: 0;
-        left: 30%;
-        right: 30%;
+        left: 0;
+        right: 0;
         clip-path: polygon(100% 100%, 100% 100%, 100% 100%);
         transition: clip-path linear 0.5s;
         animation: clip-path-bottom ease-out 1.5s;
@@ -172,6 +172,24 @@
 }
 
 // Animation
+
+@keyframes clip-path-top {
+    from {
+        clip-path: polygon(0 100%, 0 0, 100% 0);
+    }
+    to {
+        clip-path: polygon(0 0, 0 0, 0 0);
+    }
+}
+
+@keyframes clip-path-bottom {
+    from {
+        clip-path: polygon(0 100%, 100% 100%, 100% 0);
+    }
+    to {
+        clip-path: polygon(100% 100%, 100% 100%, 100% 100%);
+    }
+}
 
 @keyframes clip-path-rhombus {
     0% {
@@ -217,6 +235,12 @@
 
         span {
             font-size: 4.8rem;
+        }
+
+        &::before,
+        &::after {
+            left: 30%;
+            right: 30%;
         }
     }
 
