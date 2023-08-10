@@ -1,6 +1,7 @@
 import styles from './HeaderItem.module.scss';
 import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react/headless';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown, faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
@@ -57,5 +58,14 @@ function HeaderItem({ link, popupItems, tabletResponsive, path, hideOnSearch, ch
         </div>
     );
 }
+
+HeaderItem.propTypes = {
+    link: PropTypes.bool,
+    popupItems: PropTypes.bool,
+    tabletResponsive: PropTypes.bool,
+    hideOnSearch: PropTypes.bool,
+    path: PropTypes.string,
+    children: PropTypes.node.isRequired,
+};
 
 export default HeaderItem;

@@ -104,10 +104,10 @@ function Skins() {
                 </h4>
             </div>
             <div id={cx('bg1')} className={cx('bg1')}>
-                <img src={images.bg1} alt="" />
+                <img src={images.bg1} alt="Error Image" />
             </div>
             <div className={cx('bg2')}>
-                <img src={images.bg2} alt="" />
+                <img src={images.bg2} alt="Error Image" />
             </div>
             <div id={cx('bubbles')} className={cx('bubbles')}>
                 <span className={cx('bubble')} style={{ '--t': Math.random() * 20 }}></span>
@@ -148,7 +148,7 @@ function Skins() {
                     Make it personal by changing up the look of your favorite champions with skins.
                 </p>
                 <div className={cx('header-btns')}>
-                    <Button blue medium>
+                    <Button blue medium href={'https://signup.leagueoflegends.com/en-us/signup/index#/'}>
                         PLAY NOW
                     </Button>
                 </div>

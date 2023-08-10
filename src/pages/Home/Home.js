@@ -5,6 +5,7 @@ import Gamemodes from '../../components/HomePage/Gamemodes';
 import styles from './Home.module.scss';
 import classNames from 'classnames/bind';
 import Gameplay from '../../components/HomePage/Gameplay';
+import Featured from '../../components/HomePage/Featured';
 
 const cx = classNames.bind(styles);
 
@@ -16,6 +17,7 @@ function Home() {
             <Skins />
             <Gamemodes />
             <Gameplay />
+            <Featured />
         </div>
     );
 }

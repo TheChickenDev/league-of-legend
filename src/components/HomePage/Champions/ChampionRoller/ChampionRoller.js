@@ -103,53 +103,53 @@ function ChampionImage({ renderItem }) {
             <div className={cx('roll-bar')}>
                 <div className={cx('roll-item', 'active')} onClick={(e) => handleRollItemClick(0)}>
                     <div className={cx('roll-item-img')}>
-                        <img className={cx('roll-item-border')} src={svgImages.border} alt="" />
-                        <img className={cx('roll-item-icon')} src={svgImages.logoAssassin} alt="" />
+                        <img className={cx('roll-item-border')} src={svgImages.border} alt="Error Image" />
+                        <img className={cx('roll-item-icon')} src={svgImages.logoAssassin} alt="Error Image" />
                     </div>
                     <h4 className={cx('roll-item-label')}>ASSASSINS</h4>
                 </div>
                 <div className={cx('roll-item')} onClick={(e) => handleRollItemClick(1)}>
                     <div className={cx('roll-item-img')}>
-                        <img className={cx('roll-item-border')} src={svgImages.border} alt="" />
-                        <img className={cx('roll-item-icon')} src={svgImages.logoFighter} alt="" />
+                        <img className={cx('roll-item-border')} src={svgImages.border} alt="Error Image" />
+                        <img className={cx('roll-item-icon')} src={svgImages.logoFighter} alt="Error Image" />
                     </div>
                     <h4 className={cx('roll-item-label')}>FIGHTERS</h4>
                 </div>
                 <div className={cx('roll-item')} onClick={(e) => handleRollItemClick(2)}>
                     <div className={cx('roll-item-img')}>
-                        <img className={cx('roll-item-border')} src={svgImages.border} alt="" />
-                        <img className={cx('roll-item-icon')} src={svgImages.logoMage} alt="" />
+                        <img className={cx('roll-item-border')} src={svgImages.border} alt="Error Image" />
+                        <img className={cx('roll-item-icon')} src={svgImages.logoMage} alt="Error Image" />
                     </div>
                     <h4 className={cx('roll-item-label')}>MAGES</h4>
                 </div>
                 <div className={cx('roll-item')} onClick={(e) => handleRollItemClick(3)}>
                     <div className={cx('roll-item-img')}>
-                        <img className={cx('roll-item-border')} src={svgImages.border} alt="" />
-                        <img className={cx('roll-item-icon')} src={svgImages.logoMarksman} alt="" />
+                        <img className={cx('roll-item-border')} src={svgImages.border} alt="Error Image" />
+                        <img className={cx('roll-item-icon')} src={svgImages.logoMarksman} alt="Error Image" />
                     </div>
                     <h4 className={cx('roll-item-label')}>MARKSMEN</h4>
                 </div>
                 <div className={cx('roll-item')} onClick={(e) => handleRollItemClick(4)}>
                     <div className={cx('roll-item-img')}>
-                        <img className={cx('roll-item-border')} src={svgImages.border} alt="" />
-                        <img className={cx('roll-item-icon')} src={svgImages.logoSupport} alt="" />
+                        <img className={cx('roll-item-border')} src={svgImages.border} alt="Error Image" />
+                        <img className={cx('roll-item-icon')} src={svgImages.logoSupport} alt="Error Image" />
                     </div>
                     <h4 className={cx('roll-item-label')}>SUPPORTS</h4>
                 </div>
                 <div className={cx('roll-item')} onClick={(e) => handleRollItemClick(5)}>
                     <div className={cx('roll-item-img')}>
-                        <img className={cx('roll-item-border')} src={svgImages.border} alt="" />
-                        <img className={cx('roll-item-icon')} src={svgImages.logoTank} alt="" />
+                        <img className={cx('roll-item-border')} src={svgImages.border} alt="Error Image" />
+                        <img className={cx('roll-item-icon')} src={svgImages.logoTank} alt="Error Image" />
                     </div>
                     <h4 className={cx('roll-item-label')}>TANKS</h4>
                 </div>
                 <div id={cx('roll-dot')} className={cx('roll-dot')}></div>
             </div>
             <div className={cx('champion-img-bounding')}>
-                <img src="" alt="" id={cx('pseudo-img')} />
+                <img src="" alt="Error Image" id={cx('pseudo-img')} />
                 {renderItems.map((item, index) => (
                     <div className={cx('champion-img-item')} key={index}>
-                        <img id={cx('champion-img')} src={item.img} alt="" />
+                        <img id={cx('champion-img')} src={item.img} alt="Error Image" />
                         <div className={cx('champion-img-text')}>
                             <p id={cx('champion-img-name')}>{item.name}</p>
                             <p id={cx('champion-img-appellation')}>{item.appellation}</p>

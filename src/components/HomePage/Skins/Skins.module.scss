@@ -34,7 +34,7 @@
     height: 100%;
     z-index: 1;
     display: flex;
-    transition: transform linear 1s;
+    transition: transform ease-out 4s;
 
     img {
         width: 100%;
@@ -67,7 +67,7 @@
     display: flex;
     z-index: 200;
     overflow: hidden;
-    transition: transform linear 1s;
+    transition: transform linear 2s;
 }
 
 .bubble {
@@ -90,6 +90,7 @@
     right: 10%;
     text-align: center;
     z-index: 201;
+    transition: transform ease-out 2s;
 }
 
 .header-title {

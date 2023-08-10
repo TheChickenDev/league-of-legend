@@ -77,7 +77,7 @@ function Gamemodes() {
                     MULTIPLE WAYS TO <span>PLAY</span>
                 </h2>
                 <div className={cx('header-btns')}>
-                    <Button blue medium>
+                    <Button blue medium href={'https://signup.leagueoflegends.com/en-us/signup/index#/'}>
                         PLAY NOW
                     </Button>
                 </div>
@@ -86,7 +86,7 @@ function Gamemodes() {
             <div className={cx('video-border')}>
                 <Canvas draw={draw} imgAnimation />
                 <div className={cx('video-border-svg')}>
-                    <img src={border} alt="" />
+                    <img src={border} alt="Error Image" />
                 </div>
             </div>
         </div>

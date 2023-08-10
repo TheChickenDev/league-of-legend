@@ -8,6 +8,8 @@
     font-family: 'Spiegel';
     letter-spacing: 1.5px;
     position: relative;
+    text-align: center;
+    display: block;
 
     &.round {
         border-radius: 12.8px;
@@ -16,6 +18,7 @@
     &.big {
         width: 195px;
         height: 56px;
+        line-height: 42px;
 
         & ~ .big {
             margin-left: 20px;

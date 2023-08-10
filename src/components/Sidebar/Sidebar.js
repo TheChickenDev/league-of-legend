@@ -1,6 +1,6 @@
 import styles from './Sidebar.module.scss';
 import classNames from 'classnames/bind';
-import images from '../../assets/svg';
+import logo from '../../assets/svg/logo';
 import Button from '../Button/Button';
 import { Fragment, useEffect, useRef } from 'react';
 import { paths } from '../../routes';
@@ -60,7 +60,7 @@ function Sidebar() {
             <div ref={sidebarRef} className={cx('wrapper')}>
                 <div className={cx('header')}>
                     <Link className={cx('logo')} to={paths.Home}>
-                        <img src={images.logoLOL} alt="" />
+                        <img src={logo.logoLOL} alt="Error Image" />
                     </Link>
                     <button className={cx('close-btn')} onClick={() => setShowSidebar(false)}>
                         <FontAwesomeIcon icon={faXmark} />
@@ -182,11 +182,17 @@ function Sidebar() {
                     </Link>
                 </div>
                 <div className={cx('btns')}>
-                    <Button fullWidth round>
+                    <Button fullWidth round href={'https://signup.leagueoflegends.com/en-us/signup/index#/'}>
                         SIGN IN
                     </Button>
                     <br />
-                    <Button fullWidth blue round blackText>
+                    <Button
+                        fullWidth
+                        blue
+                        round
+                        blackText
+                        href={'https://signup.leagueoflegends.com/en-us/signup/index#/'}
+                    >
                         PLAY NOW
                     </Button>
                 </div>

@@ -1,10 +1,11 @@
 import styles from './Header.module.scss';
 import classNames from 'classnames/bind';
 import Sidebar from '../Sidebar';
-import images from '../../assets/svg';
+import logo from '../../assets/svg/logo';
 import HeaderItem from './HeaderItem';
 import Login from './Login';
 import Tippy from '@tippyjs/react/headless';
+import { paths } from '../../routes';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faCircleExclamation, faGlobe, faMagnifyingGlass, faX } from '@fortawesome/free-solid-svg-icons';
@@ -18,60 +19,84 @@ const languages = [
         code: 'en',
     },
     {
-        language: 'english',
-        code: 'en',
+        language: 'czech',
+        code: 'cz',
     },
     {
-        language: 'english',
-        code: 'en',
+        language: 'greek',
+        code: 'gr',
     },
     {
-        language: 'english',
-        code: 'en',
+        language: 'polish',
+        code: 'pl',
     },
     {
-        language: 'english',
-        code: 'en',
+        language: 'romanian',
+        code: 'ro',
     },
     {
-        language: 'english',
-        code: 'en',
+        language: 'hungarian',
+        code: 'hu',
     },
     {
-        language: 'english',
-        code: 'en',
+        language: 'german',
+        code: 'de',
     },
     {
-        language: 'english',
-        code: 'en',
+        language: 'spanish',
+        code: 'es',
     },
     {
-        language: 'english',
-        code: 'en',
+        language: 'italian',
+        code: 'it',
     },
     {
-        language: 'english',
-        code: 'en',
+        language: 'french',
+        code: 'fr',
     },
     {
-        language: 'english',
-        code: 'en',
+        language: 'japanese',
+        code: 'jp',
     },
     {
-        language: 'english',
-        code: 'en',
+        language: 'korean',
+        code: 'kr',
     },
     {
-        language: 'english',
-        code: 'en',
+        language: 'spanish',
+        code: 'mx',
     },
     {
-        language: 'english',
-        code: 'en',
+        language: 'portuguese',
+        code: 'br',
     },
     {
-        language: 'english',
-        code: 'en',
+        language: 'russian',
+        code: 'ru',
+    },
+    {
+        language: 'turkish',
+        code: 'tr',
+    },
+    {
+        language: 'malay',
+        code: 'my',
+    },
+    {
+        language: 'thai',
+        code: 'th',
+    },
+    {
+        language: 'vietnamese',
+        code: 'vn',
+    },
+    {
+        language: 'indonesian',
+        code: 'id',
+    },
+    {
+        language: 'chinese',
+        code: 'cn',
     },
 ];
 
@@ -98,70 +123,80 @@ function Header() {
     return (
         <Fragment>
             <div className={cx('wrapper')}>
-                <Link to="/" className={cx('logo')}>
-                    <img src={images.logo} alt="LeagueOfLegend" />
+                <Link to={paths.Home} className={cx('logo')}>
+                    <img src={logo.logo} alt="LeagueOfLegend" />
                 </Link>
-                <Link to="/" className={cx('logoLOL')}>
-                    <img src={images.logoLOL} alt="LeagueOfLegend" />
+                <Link to={paths.Home} className={cx('logoLOL')}>
+                    <img src={logo.logoLOL} alt="LeagueOfLegend" />
                 </Link>
                 <div className={cx('items')}>
-                    <HeaderItem path={'/'}>Game</HeaderItem>
-                    <HeaderItem path={'/champions'}>Champions</HeaderItem>
+                    <HeaderItem path={paths.Game}>Game</HeaderItem>
+                    <HeaderItem path={paths.Champions}>Champions</HeaderItem>
                     <HeaderItem
                         popupItems={[
-                            { title: 'All', path: '/', icon: false },
-                            { title: 'Game Updates', path: '/', icon: false },
-                            { title: 'Esports', path: '/', icon: false },
-                            { title: 'Dev', path: '/', icon: false },
-                            { title: 'Lore', path: '/', icon: false },
-                            { title: 'Media', path: '/', icon: false },
-                            { title: 'Merch', path: '/', icon: false },
-                            { title: 'Community', path: '/', icon: false },
-                            { title: 'Riot Games', path: '/', icon: false },
+                            { title: 'All', path: paths.News, icon: false },
+                            { title: 'Game Updates', path: paths.News, icon: false },
+                            { title: 'Esports', path: paths.News, icon: false },
+                            { title: 'Dev', path: paths.News, icon: false },
+                            { title: 'Lore', path: paths.News, icon: false },
+                            { title: 'Media', path: paths.News, icon: false },
+                            { title: 'Merch', path: paths.News, icon: false },
+                            { title: 'Community', path: paths.News, icon: false },
+                            { title: 'Riot Games', path: paths.News, icon: false },
                         ]}
                     >
                         News
                     </HeaderItem>
-                    <HeaderItem path={'/patchnotes'} tabletResponsive>
+                    <HeaderItem path={paths.PatchNotes} tabletResponsive>
                         Patch Notes
                     </HeaderItem>
                     <HeaderItem
                         tabletResponsive
                         popupItems={[
-                            { title: 'Community', path: '/', icon: false },
-                            { title: 'League Displays', path: '/', icon: false },
-                            { title: 'Riot Mobile', path: '/', icon: false },
-                            { title: 'Avatar Creator', path: '/', icon: false },
+                            { title: 'Community', path: paths.Discover, icon: false },
+                            { title: 'League Displays', path: paths.Discover, icon: false },
+                            { title: 'Riot Mobile', path: paths.Discover, icon: false },
+                            { title: 'Avatar Creator', path: paths.Discover, icon: false },
                         ]}
                     >
                         Discover
                     </HeaderItem>
-                    <HeaderItem link path={'/'} hideOnSearch={showSearchInput}>
+                    <HeaderItem
+                        link
+                        path={'https://lolesports.com/schedule?leagues=worlds,msi'}
+                        hideOnSearch={showSearchInput}
+                    >
                         Esports
                     </HeaderItem>
-                    <HeaderItem link path={'/'} hideOnSearch={showSearchInput}>
+                    <HeaderItem
+                        link
+                        path={
+                            'https://universe.leagueoflegends.com/en_US/?_gl=1*18hhlx6*_ga*MTIzOTE3NzMzMy4xNjkwNjA3MDg4*_ga_FXBJE5DEDD*MTY5MDYwNzA4Ny4xLjEuMTY5MDYwNzEzOS44LjAuMA..'
+                        }
+                        hideOnSearch={showSearchInput}
+                    >
                         Universe
                     </HeaderItem>
                     <HeaderItem
                         popupItems={[
-                            { title: 'Shop', path: '/', icon: true },
-                            { title: 'Support', path: '/', icon: true },
+                            { title: 'Shop', path: paths.Shop, icon: true },
+                            { title: 'Support', path: paths.Support, icon: true },
                             {
                                 title: 'Esports',
-                                path: '/',
+                                path: 'https://lolesports.com/schedule?leagues=worlds,msi',
                                 icon: true,
                                 hideOnSmallPC: true,
                                 showOnSearch: showSearchInput,
                             },
                             {
                                 title: 'Universe',
-                                path: '/',
+                                path: 'https://universe.leagueoflegends.com/en_US/?_gl=1*18hhlx6*_ga*MTIzOTE3NzMzMy4xNjkwNjA3MDg4*_ga_FXBJE5DEDD*MTY5MDYwNzA4Ny4xLjEuMTY5MDYwNzEzOS44LjAuMA..',
                                 icon: true,
                                 hideOnSmallPC: true,
                                 showOnSearch: showSearchInput,
                             },
-                            { title: 'Patch Notes', path: '/', icon: true, hideOnTablet: true },
-                            { title: 'Discover', path: '/', icon: true, hideOnTablet: true },
+                            { title: 'Patch Notes', path: paths.PatchNotes, icon: true, hideOnTablet: true },
+                            { title: 'Discover', path: paths.Discover, icon: true, hideOnTablet: true },
                         ]}
                     >
                         More

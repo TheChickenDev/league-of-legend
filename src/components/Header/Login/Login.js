@@ -7,9 +7,11 @@ const cx = classNames.bind(styles);
 function LoginFunction() {
     return (
         <div className={cx('wrapper')}>
-            <Button round>SIGN IN</Button>
+            <Button round href={'https://signup.leagueoflegends.com/en-us/signup/index#/'}>
+                SIGN IN
+            </Button>
             <div className={cx('space')}></div>
-            <Button blue round blackText>
+            <Button blue round blackText href={'https://signup.leagueoflegends.com/en-us/signup/index#/'}>
                 PLAY NOW
             </Button>
         </div>

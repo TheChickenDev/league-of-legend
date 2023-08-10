@@ -55,7 +55,7 @@
     height: 100%;
     display: block;
     transform: scale(1.2);
-    animation: imgSlideIn linear 1.2s;
+    animation: imgSlideIn linear 0.6s;
 }
 
 .champion-img-text {
@@ -66,7 +66,7 @@
     letter-spacing: 1.4px;
     transform: translateX(-50%);
     text-align: center;
-    animation: fadeIn linear 1.2s;
+    animation: fadeIn linear 0.6s;
 }
 
 #champion-img-name {

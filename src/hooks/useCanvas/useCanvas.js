@@ -10,16 +10,18 @@ function useCanvas(draw) {
         let animationID;
 
         const renderer = () => {
-            const rect = canvas.getBoundingClientRect();
-            canvas.width = rect.width * devicePixelRatio;
-            canvas.height = rect.height * devicePixelRatio;
+            if (canvas) {
+                const rect = canvas.getBoundingClientRect();
+                canvas.width = rect.width * devicePixelRatio;
+                canvas.height = rect.height * devicePixelRatio;
 
-            ctx.scale(devicePixelRatio, devicePixelRatio);
+                ctx.scale(devicePixelRatio, devicePixelRatio);
 
-            canvas.style.width = rect.width + 'px';
-            canvas.style.height = rect.height + 'px';
-            draw(ctx, rect);
-            window.requestAnimationFrame(renderer);
+                canvas.style.width = rect.width + 'px';
+                canvas.style.height = rect.height + 'px';
+                draw(ctx, rect);
+                animationID = window.requestAnimationFrame(renderer);
+            }
         };
 
         renderer();

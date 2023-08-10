@@ -3,6 +3,7 @@ import classNames from 'classnames/bind';
 import Button from '../../Button';
 import Canvas from '../../Canvas/';
 import ChampionRoller from './ChampionRoller';
+import { paths } from '../../../routes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus } from '@fortawesome/free-solid-svg-icons';
 
@@ -80,10 +81,10 @@ function Champions() {
                     there’s a spot for you on the Rift.
                 </p>
                 <div className={cx('header-btns')}>
-                    <Button yellow medium>
+                    <Button yellow medium to={paths.Champions}>
                         DISCOVER MORE CHAMIONS
                     </Button>
-                    <Button blue medium>
+                    <Button blue medium to={paths.Game}>
                         PLAY NOW
                     </Button>
                 </div>

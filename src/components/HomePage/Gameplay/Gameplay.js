@@ -2,6 +2,7 @@ import styles from './Gameplay.module.scss';
 import classNames from 'classnames/bind';
 import Button from '../../Button';
 import map from '../../../assets/imgs/homepage/gameplay/map.png';
+import { paths } from '../../../routes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus } from '@fortawesome/free-solid-svg-icons';
 import { useEffect } from 'react';
@@ -33,7 +34,7 @@ function Gameplay() {
                 </h4>
             </div>
             <div id={cx('map')}>
-                <img src={map} alt="" />
+                <img src={map} alt="Error Image" />
             </div>
             <div className={cx('header')}>
                 <h2 className={cx('header-title')}>
@@ -43,11 +44,11 @@ function Gameplay() {
                     New to League? Get a rundown on the basics for the most popular game mode.
                 </p>
                 <div className={cx('header-btns')}>
-                    <Button yellow big>
-                        PLAY NOW
+                    <Button yellow big blackText href={'https://signup.leagueoflegends.com/en-us/signup/index#/'}>
+                        GET STARTED
                     </Button>
-                    <Button blue big>
-                        PLAY NOW
+                    <Button blue big blackText to={paths.Game}>
+                        PLAY FOR FREE
                     </Button>
                 </div>
             </div>

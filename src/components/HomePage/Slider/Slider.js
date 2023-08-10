@@ -1,15 +1,17 @@
 import styles from './Slider.module.scss';
 import classNames from 'classnames/bind';
-import images from '../../../assets/imgs';
+import logo from '../../../assets/imgs/logo/logo-en-us.png';
 import Button from '../../Button';
 import SliderItem from './SliderItem/SliderItem';
 import heroVideo from '../../../assets/videos/homepage/hero.webm';
 import heroMobileVideo from '../../../assets/videos/homepage/heroMobile.webm';
 import heroBlurredVideo from '../../../assets/videos/homepage/heroBlurred.webm';
+import { paths } from '../../../routes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus } from '@fortawesome/free-solid-svg-icons';
 import { faHandPointRight } from '@fortawesome/free-regular-svg-icons';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -76,11 +78,13 @@ function Slider() {
                 </video>
                 <div className={cx('logo')}>
                     <div className={cx('logo-img')}>
-                        <img src={images.logo} alt="LeagueOfLegend" />
+                        <img src={logo} alt="LeagueOfLegend" />
                     </div>
-                    <Button big blue blackText>
-                        PLAY FOR FREE
-                    </Button>
+                    <div className={cx('logo-btn')}>
+                        <Button big blue blackText to={paths.Game}>
+                            PLAY FOR FREE
+                        </Button>
+                    </div>
                 </div>
             </div>
             <div className={cx('main-video', 'hideOnMobile')}>
@@ -108,6 +112,7 @@ function Slider() {
                                     label={item.label}
                                     title={item.title}
                                     content={item.content}
+                                    to={paths.News}
                                 ></SliderItem>
                             );
                         })}
@@ -121,15 +126,16 @@ function Slider() {
                                     label={item.label}
                                     title={item.title}
                                     content={item.content}
+                                    to={paths.News}
                                 ></SliderItem>
                             );
                         })}
                     </div>
-                    <div className={cx('news-btn')}>
-                        <button>
+                    <div className={cx('news-btn-wrapper')}>
+                        <Link to={paths.News} className={cx('news-btn')}>
                             VIEW ALL
                             <FontAwesomeIcon className={cx('news-btn-icon')} icon={faHandPointRight}></FontAwesomeIcon>
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>

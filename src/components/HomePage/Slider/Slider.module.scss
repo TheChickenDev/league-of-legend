@@ -80,12 +80,17 @@
     }
 }
 
+.logo-btn {
+    width: fit-content;
+    margin: auto;
+}
+
 .news {
     position: absolute;
     width: 100%;
     z-index: 2;
     top: 80%;
-    background: url('../../../assets/imgs/sliderBG.png') top, left, repeat-x;
+    background: url('../../../assets/imgs/homepage//slider/sliderBG.png') top left repeat-x;
 }
 
 .news-content {
@@ -121,14 +126,16 @@
     }
 }
 
-.news-btn {
+.news-btn-wrapper {
     float: right;
     padding: 16px 0;
 
-    button {
+    .news-btn {
         padding: 8px 16px;
         background-color: transparent;
         cursor: pointer;
+        display: block;
+        color: #000;
 
         &:hover > .news-btn-icon {
             transform: translateX(100%);

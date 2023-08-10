@@ -1,5 +1,6 @@
 .wrapper {
     position: relative;
+    text-wrap: nowrap;
 }
 
 .content {
@@ -13,7 +14,7 @@
     letter-spacing: 2px;
     border-radius: 4px;
     position: relative;
-    color: var(--white);
+    color: #fff;
 
     &:hover {
         background-color: #8080804d;
@@ -65,7 +66,7 @@
     min-width: 150px;
     padding: 8px 16px;
     border-radius: 4px;
-    color: var(--white);
+    color: #fff;
 
     &:hover {
         background-color: #8080804d;
