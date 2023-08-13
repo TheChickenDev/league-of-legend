@@ -123,40 +123,40 @@ function Header() {
     return (
         <Fragment>
             <div className={cx('wrapper')}>
-                <Link to={paths.Home} className={cx('logo')}>
+                <Link to={paths.home} className={cx('logo')}>
                     <img src={logo.logo} alt="LeagueOfLegend" />
                 </Link>
-                <Link to={paths.Home} className={cx('logoLOL')}>
+                <Link to={paths.home} className={cx('logoLOL')}>
                     <img src={logo.logoLOL} alt="LeagueOfLegend" />
                 </Link>
                 <div className={cx('items')}>
-                    <HeaderItem path={paths.Game}>Game</HeaderItem>
-                    <HeaderItem path={paths.Champions}>Champions</HeaderItem>
+                    <HeaderItem path={paths.game}>Game</HeaderItem>
+                    <HeaderItem path={paths.champions}>Champions</HeaderItem>
                     <HeaderItem
                         popupItems={[
-                            { title: 'All', path: paths.News, icon: false },
-                            { title: 'Game Updates', path: paths.News, icon: false },
-                            { title: 'Esports', path: paths.News, icon: false },
-                            { title: 'Dev', path: paths.News, icon: false },
-                            { title: 'Lore', path: paths.News, icon: false },
-                            { title: 'Media', path: paths.News, icon: false },
-                            { title: 'Merch', path: paths.News, icon: false },
-                            { title: 'Community', path: paths.News, icon: false },
-                            { title: 'Riot Games', path: paths.News, icon: false },
+                            { title: 'All', path: paths.news, icon: false },
+                            { title: 'Game Updates', path: paths.news, icon: false },
+                            { title: 'Esports', path: paths.news, icon: false },
+                            { title: 'Dev', path: paths.news, icon: false },
+                            { title: 'Lore', path: paths.news, icon: false },
+                            { title: 'Media', path: paths.news, icon: false },
+                            { title: 'Merch', path: paths.news, icon: false },
+                            { title: 'Community', path: paths.news, icon: false },
+                            { title: 'Riot Games', path: paths.news, icon: false },
                         ]}
                     >
                         News
                     </HeaderItem>
-                    <HeaderItem path={paths.PatchNotes} tabletResponsive>
+                    <HeaderItem path={paths.patchNotes} tabletResponsive>
                         Patch Notes
                     </HeaderItem>
                     <HeaderItem
                         tabletResponsive
                         popupItems={[
-                            { title: 'Community', path: paths.Discover, icon: false },
-                            { title: 'League Displays', path: paths.Discover, icon: false },
-                            { title: 'Riot Mobile', path: paths.Discover, icon: false },
-                            { title: 'Avatar Creator', path: paths.Discover, icon: false },
+                            { title: 'Community', path: paths.discover, icon: false },
+                            { title: 'League Displays', path: paths.discover, icon: false },
+                            { title: 'Riot Mobile', path: paths.discover, icon: false },
+                            { title: 'Avatar Creator', path: paths.discover, icon: false },
                         ]}
                     >
                         Discover
@@ -179,8 +179,8 @@ function Header() {
                     </HeaderItem>
                     <HeaderItem
                         popupItems={[
-                            { title: 'Shop', path: paths.Shop, icon: true },
-                            { title: 'Support', path: paths.Support, icon: true },
+                            { title: 'Shop', path: paths.shop, icon: true },
+                            { title: 'Support', path: paths.support, icon: true },
                             {
                                 title: 'Esports',
                                 path: 'https://lolesports.com/schedule?leagues=worlds,msi',
@@ -195,8 +195,8 @@ function Header() {
                                 hideOnSmallPC: true,
                                 showOnSearch: showSearchInput,
                             },
-                            { title: 'Patch Notes', path: paths.PatchNotes, icon: true, hideOnTablet: true },
-                            { title: 'Discover', path: paths.Discover, icon: true, hideOnTablet: true },
+                            { title: 'Patch Notes', path: paths.patchNotes, icon: true, hideOnTablet: true },
+                            { title: 'Discover', path: paths.discover, icon: true, hideOnTablet: true },
                         ]}
                     >
                         More

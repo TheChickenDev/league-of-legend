@@ -26,7 +26,7 @@ function Footer() {
                         target="_blank"
                         rel="noreferrer"
                     >
-                        <img src={down_appstore} alt="Error Image" />
+                        <img src={down_appstore} alt="Error" />
                     </a>
                     <a
                         className={cx('download-btns-item')}
@@ -34,12 +34,12 @@ function Footer() {
                         target="_blank"
                         rel="noreferrer"
                     >
-                        <img src={down_ggplay} alt="Error Image" />
+                        <img src={down_ggplay} alt="Error" />
                     </a>
                 </div>
             </div>
             <div className={cx('header')}>
-                <Link className={cx('header-item')} to={paths.Game}>
+                <Link className={cx('header-item')} to={paths.game}>
                     About league of legends
                 </Link>
                 <a
@@ -58,7 +58,7 @@ function Footer() {
                 >
                     Server status
                 </a>
-                <Link className={cx('header-item')} to={paths.Support}>
+                <Link className={cx('header-item')} to={paths.support}>
                     Support
                 </Link>
                 <a
@@ -122,7 +122,7 @@ function Footer() {
                     </a>
                 </div>
                 <a className={cx('logo')} href="https://www.riotgames.com/vi" target="_blank" rel="noreferrer">
-                    <img src={logo.logoRiot} alt="Error Image" />
+                    <img src={logo.logoRiot} alt="Error" />
                 </a>
                 <p className={cx('copyright')}>
                     ™ & © 2023 Riot Games, Inc. League of Legends and all related logos, characters, names and
@@ -156,7 +156,7 @@ function Footer() {
                         target="_blank"
                         rel="noreferrer"
                     >
-                        <img src={na_esrb} alt="Error Image" />
+                        <img src={na_esrb} alt="Error" />
                     </a>
                     <div className={cx('rating-text')}>
                         Blood

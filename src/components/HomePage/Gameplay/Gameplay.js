@@ -34,7 +34,7 @@ function Gameplay() {
                 </h4>
             </div>
             <div id={cx('map')}>
-                <img src={map} alt="Error Image" />
+                <img src={map} alt="Error" />
             </div>
             <div className={cx('header')}>
                 <h2 className={cx('header-title')}>
@@ -47,7 +47,7 @@ function Gameplay() {
                     <Button yellow big blackText href={'https://signup.leagueoflegends.com/en-us/signup/index#/'}>
                         GET STARTED
                     </Button>
-                    <Button blue big blackText to={paths.Game}>
+                    <Button blue big blackText to={paths.game}>
                         PLAY FOR FREE
                     </Button>
                 </div>

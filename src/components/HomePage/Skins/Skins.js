@@ -104,10 +104,10 @@ function Skins() {
                 </h4>
             </div>
             <div id={cx('bg1')} className={cx('bg1')}>
-                <img src={images.bg1} alt="Error Image" />
+                <img src={images.bg1} alt="Error" />
             </div>
             <div className={cx('bg2')}>
-                <img src={images.bg2} alt="Error Image" />
+                <img src={images.bg2} alt="Error" />
             </div>
             <div id={cx('bubbles')} className={cx('bubbles')}>
                 <span className={cx('bubble')} style={{ '--t': Math.random() * 20 }}></span>

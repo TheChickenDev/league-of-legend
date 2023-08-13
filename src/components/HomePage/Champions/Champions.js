@@ -81,10 +81,10 @@ function Champions() {
                     there’s a spot for you on the Rift.
                 </p>
                 <div className={cx('header-btns')}>
-                    <Button yellow medium to={paths.Champions}>
+                    <Button yellow medium to={paths.champions}>
                         DISCOVER MORE CHAMIONS
                     </Button>
-                    <Button blue medium to={paths.Game}>
+                    <Button blue medium to={paths.game}>
                         PLAY NOW
                     </Button>
                 </div>

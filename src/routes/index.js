@@ -6,29 +6,31 @@ import News from '../pages/News';
 import PatchNotes from '../pages/PatchNotes';
 import Shop from '../pages/Shop';
 import Support from '../pages/Support';
+import ChampionInfo from '../pages/ChampionInfo';
 
 const paths = {
-    Home: '/',
-    Champions: '/champions',
-    Discover: '/discover',
-    Game: '/game',
-    News: '/news',
-    PatchNotes: '/patchnotes',
-    Shop: '/shop',
-    Support: '/Support',
+    home: '/',
+    champions: '/champions',
+    championInfo: '/champions/:name',
+    discover: '/discover',
+    game: '/game',
+    news: '/news',
+    patchNotes: '/patchnotes',
+    shop: '/shop',
+    support: '/Support',
 };
 
 const routes = [
     {
-        path: '/',
+        path: paths.home,
         component: Home,
     },
     {
-        path: '/champions',
+        path: paths.champions,
         component: Champions,
     },
     {
-        path: '/discover',
+        path: paths.discover,
         component: Discover,
     },
     {
@@ -36,20 +38,24 @@ const routes = [
         component: Game,
     },
     {
-        path: '/news',
+        path: paths.news,
         component: News,
     },
     {
-        path: '/patchnotes',
+        path: paths.patchNotes,
         component: PatchNotes,
     },
     {
-        path: '/shop',
+        path: paths.shop,
         component: Shop,
     },
     {
-        path: '/support',
+        path: paths.support,
         component: Support,
+    },
+    {
+        path: paths.championInfo,
+        component: ChampionInfo,
     },
 ];
 

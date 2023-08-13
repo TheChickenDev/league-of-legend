@@ -45,13 +45,13 @@ function Map() {
         <Fragment>
             <div className={cx('backgrounds')}>
                 <div className={cx('backgrounds-item', 'active')}>
-                    <img src={images.summonersrift} alt="Error Image" />
+                    <img src={images.summonersrift} alt="Error" />
                 </div>
                 <div className={cx('backgrounds-item')}>
-                    <img src={images.aram} alt="Error Image" />
+                    <img src={images.aram} alt="Error" />
                 </div>
                 <div className={cx('backgrounds-item')}>
-                    <img src={images.teamfighttactics} alt="Error Image" />
+                    <img src={images.teamfighttactics} alt="Error" />
                 </div>
                 <div className={cx('backgrounds-black-layer-top')}></div>
                 <div className={cx('backgrounds-black-layer-bottom')}></div>
@@ -79,21 +79,21 @@ function Map() {
                         <button className={cx('roller-item', 'active')} onClick={() => setRenderIndex(0)}>
                             <span className={cx('roller-name')}>SUMMONER'S RIFT</span>
                             <div className={cx('roller-img-wrapper')}>
-                                <img className={cx('roller-img')} src={images.summonersriftRoll} alt="Error Image" />
+                                <img className={cx('roller-img')} src={images.summonersriftRoll} alt="Error" />
                             </div>
                             <div className={cx('roller-bg')}></div>
                         </button>
                         <button className={cx('roller-item')} onClick={() => setRenderIndex(1)}>
                             <span className={cx('roller-name')}>ARAM</span>
                             <div className={cx('roller-img-wrapper')}>
-                                <img className={cx('roller-img')} src={images.aramRoll} alt="Error Image" />
+                                <img className={cx('roller-img')} src={images.aramRoll} alt="Error" />
                             </div>
                             <div className={cx('roller-bg')}></div>
                         </button>
                         <button className={cx('roller-item')} onClick={() => setRenderIndex(2)}>
                             <span className={cx('roller-name')}>TEAMFIGHT TACTICS</span>
                             <div className={cx('roller-img-wrapper')}>
-                                <img className={cx('roller-img')} src={images.teamfighttacticsRoll} alt="Error Image" />
+                                <img className={cx('roller-img')} src={images.teamfighttacticsRoll} alt="Error" />
                             </div>
                             <div className={cx('roller-bg')}></div>
                         </button>
@@ -103,7 +103,7 @@ function Map() {
                     <div id={cx('roller-mobile')}>
                         <button className={cx('roller-item-mobile', 'active')} onClick={() => setRenderIndex(0)}>
                             <div className={cx('roller-img-wrapper')}>
-                                <img className={cx('roller-img')} src={images.summonersriftRoll} alt="Error Image" />
+                                <img className={cx('roller-img')} src={images.summonersriftRoll} alt="Error" />
                             </div>
                             <div className={cx('roller-bg-mobile')}>
                                 <span className={cx('roller-name-mobile')}>SUMMONER'S RIFT</span>
@@ -111,7 +111,7 @@ function Map() {
                         </button>
                         <button className={cx('roller-item-mobile')} onClick={() => setRenderIndex(1)}>
                             <div className={cx('roller-img-wrapper')}>
-                                <img className={cx('roller-img')} src={images.aramRoll} alt="Error Image" />
+                                <img className={cx('roller-img')} src={images.aramRoll} alt="Error" />
                             </div>
                             <div className={cx('roller-bg-mobile')}>
                                 <span className={cx('roller-name-mobile')}>ARAM</span>
@@ -119,7 +119,7 @@ function Map() {
                         </button>
                         <button className={cx('roller-item-mobile')} onClick={() => setRenderIndex(2)}>
                             <div className={cx('roller-img-wrapper')}>
-                                <img className={cx('roller-img')} src={images.teamfighttacticsRoll} alt="Error Image" />
+                                <img className={cx('roller-img')} src={images.teamfighttacticsRoll} alt="Error" />
                             </div>
                             <div className={cx('roller-bg-mobile')}>
                                 <span className={cx('roller-name-mobile')}>TEAMFIGHT TACTICS</span>

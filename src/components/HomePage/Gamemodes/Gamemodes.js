@@ -86,7 +86,7 @@ function Gamemodes() {
             <div className={cx('video-border')}>
                 <Canvas draw={draw} imgAnimation />
                 <div className={cx('video-border-svg')}>
-                    <img src={border} alt="Error Image" />
+                    <img src={border} alt="Error" />
                 </div>
             </div>
         </div>

@@ -1,16 +1,29 @@
-import styles from './SliderItem.module.scss';
+import styles from './HighlightsItem.module.scss';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
-function SliderItem({ img, label, title, to, content }) {
+function HighlightsItem({ img, label, title, to, href, hot }) {
     const mousePos = { x: 0, y: 0, x0: 0, y0: 0 };
 
+    const props = {};
+
+    let TagName = Link;
+
+    if (href) {
+        TagName = 'a';
+        props.href = href;
+        props.target = '_blank';
+        props.rel = 'noreferrer';
+    } else if (to) {
+        props.to = to;
+    }
+
     return (
-        <Link
-            className={cx('wrapper')}
-            to={to}
+        <TagName
+            className={cx('wrapper', { hot })}
+            {...props}
             onMouseDown={(e) => {
                 e.preventDefault();
                 mousePos.x0 = e.pageX;
@@ -30,13 +43,12 @@ function SliderItem({ img, label, title, to, content }) {
             <div className={cx('text')}>
                 <h5 className={cx('label')}>{label}</h5>
                 <h2 className={cx('title')}>{title}</h2>
-                <p className={cx('content')}>{content}</p>
             </div>
             <div className={cx('borderAnimation')}>
                 <div></div>
             </div>
-        </Link>
+        </TagName>
     );
 }
 
-export default SliderItem;
+export default HighlightsItem;
