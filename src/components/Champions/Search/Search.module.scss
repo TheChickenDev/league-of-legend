@@ -64,7 +64,7 @@
     left: -1.5px;
     width: calc(100% + 1.5px);
     max-height: 400px;
-    overflow-y: scroll;
+    overflow-y: auto;
     z-index: 2;
     background-color: #fff;
     border: 2px solid #bbbbbb;
@@ -285,7 +285,7 @@
 
 .difficulties-item {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     padding: 12px 24px;

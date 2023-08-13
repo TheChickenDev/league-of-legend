@@ -7,7 +7,7 @@ import Button from '../../Button';
 import { paths } from '../../../routes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleDown, faMagnifyingGlass, faXmarkCircle } from '@fortawesome/free-solid-svg-icons';
-import { Fragment, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
