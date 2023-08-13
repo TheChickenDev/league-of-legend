@@ -1,7 +1,7 @@
 .wrapper {
     background-color: transparent;
     position: relative;
-    width: 30%;
+    width: 33.33333%;
     height: 180px;
     display: flex;
     cursor: pointer;
@@ -40,7 +40,7 @@
         z-index: 3;
         width: 25px;
         border-top: 3px solid #a1a1a1;
-        animation: 0.2s ease-in slideFromRightOnHover;
+        animation: 0.2s linear slideFromRightOnHover;
     }
 
     &::after {
@@ -48,11 +48,11 @@
         display: none;
         position: absolute;
         top: -10px;
-        right: 10px;
+        right: 9.5px;
         z-index: 3;
         height: 25px;
         border-right: 3px solid #a1a1a1;
-        animation: 0.2s ease-in slideFromTopOnHover;
+        animation: 0.2s linear slideFromTopOnHover;
     }
 }
 
@@ -115,7 +115,7 @@
 }
 
 .img {
-    width: 145px;
+    max-width: 200px;
     height: 100%;
     overflow: hidden;
     animation: 0.8s linear fadeIn;
@@ -134,39 +134,33 @@
     flex: 1;
     text-align: left;
     padding: 0 16px 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .label {
-    color: #bcbcbc;
+    color: #0bc6e3;
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
+    width: 100%;
+    text-align: left;
     animation: 1s linear fadeIn;
 }
 
 .title {
-    font-size: 1.8rem;
+    font-size: 2.4rem;
     text-transform: capitalize;
     letter-spacing: 1px;
     line-height: 1.1;
     margin-top: 10px;
-    font-weight: 500;
+    font-weight: 600;
+    width: 100%;
+    text-align: left;
     animation: 1.2s linear fadeIn;
-}
-
-.content {
-    font-size: 1.2rem;
-    margin-top: 10px;
-    line-height: 1.1;
-    letter-spacing: 0.05em;
-    display: -webkit-box;
-    -webkit-line-clamp: 6;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    color: rgb(26, 29, 33);
-    animation: 1.4s linear fadeIn;
 }
 
 // Animations
@@ -230,7 +224,7 @@
 
 @media (max-width: 1359px) {
     .title {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
     }
 
     .content {

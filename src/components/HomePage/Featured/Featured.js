@@ -59,18 +59,18 @@ function Featured() {
                 </h2>
             </div>
             <div ref={contentRef} className={cx('content')}>
-                <Link className={cx('item')} to={paths.News}>
+                <Link className={cx('item')} to={paths.news}>
                     <div className={cx('item-img')}>
-                        <img className={cx('item-img')} src={images.featured1} alt="Error Image" />
+                        <img className={cx('item-img')} src={images.featured1} alt="Error" />
                     </div>
                     <h2 className={cx('item-title')}>NRG GO TO WORLDS & DIVE AWARDS | THE DIVE</h2>
                     <div className={cx('borderAnimation')}>
                         <div></div>
                     </div>
                 </Link>
-                <Link className={cx('item')} to={paths.News}>
+                <Link className={cx('item')} to={paths.news}>
                     <div className={cx('item-img')}>
-                        <img className={cx('item-img')} src={images.featured2} alt="Error Image" />
+                        <img className={cx('item-img')} src={images.featured2} alt="Error" />
                     </div>
                     <h2 className={cx('item-title')}>PREVIOUSLY ON STAR GUARDIAN</h2>
                     <div className={cx('borderAnimation')}>
@@ -83,7 +83,7 @@ function Featured() {
                     <source src={video} />
                 </video>
                 <div ref={videoBtnRef} className={cx('video-btn')}>
-                    <Button blue big blackText to={paths.Game}>
+                    <Button blue big blackText to={paths.game}>
                         PLAY FOR FREE
                     </Button>
                 </div>

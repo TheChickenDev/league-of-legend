@@ -61,7 +61,7 @@ function HeaderItem({ link, popupItems, tabletResponsive, path, hideOnSearch, ch
 
 HeaderItem.propTypes = {
     link: PropTypes.bool,
-    popupItems: PropTypes.bool,
+    popupItems: PropTypes.array,
     tabletResponsive: PropTypes.bool,
     hideOnSearch: PropTypes.bool,
     path: PropTypes.string,

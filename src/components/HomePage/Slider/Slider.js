@@ -81,7 +81,7 @@ function Slider() {
                         <img src={logo} alt="LeagueOfLegend" />
                     </div>
                     <div className={cx('logo-btn')}>
-                        <Button big blue blackText to={paths.Game}>
+                        <Button big blue blackText to={paths.game}>
                             PLAY FOR FREE
                         </Button>
                     </div>
@@ -112,7 +112,7 @@ function Slider() {
                                     label={item.label}
                                     title={item.title}
                                     content={item.content}
-                                    to={paths.News}
+                                    to={paths.news}
                                 ></SliderItem>
                             );
                         })}
@@ -126,13 +126,13 @@ function Slider() {
                                     label={item.label}
                                     title={item.title}
                                     content={item.content}
-                                    to={paths.News}
+                                    to={paths.news}
                                 ></SliderItem>
                             );
                         })}
                     </div>
                     <div className={cx('news-btn-wrapper')}>
-                        <Link to={paths.News} className={cx('news-btn')}>
+                        <Link to={paths.news} className={cx('news-btn')}>
                             VIEW ALL
                             <FontAwesomeIcon className={cx('news-btn-icon')} icon={faHandPointRight}></FontAwesomeIcon>
                         </Link>

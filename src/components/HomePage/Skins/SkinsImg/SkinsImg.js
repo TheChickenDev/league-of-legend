@@ -40,11 +40,11 @@ function SkinsImg() {
         <div className={cx('skins')}>
             {renderItems.map((item, index) => (
                 <div className={cx('skins-item')} key={index}>
-                    <img className={cx('skins-item-img')} src={item} alt="Error Image" />
+                    <img className={cx('skins-item-img')} src={item} alt="Error" />
                 </div>
             ))}
             <div id={cx('skins-item-pseudo')}>
-                <img id={cx('skins-item-img-pseudo')} src="" alt="Error Image" />
+                <img id={cx('skins-item-img-pseudo')} src="" alt="Error" />
             </div>
         </div>
     );

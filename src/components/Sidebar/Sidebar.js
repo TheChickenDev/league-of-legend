@@ -59,8 +59,8 @@ function Sidebar() {
             <div ref={layoutRef} className={cx('layout')}></div>
             <div ref={sidebarRef} className={cx('wrapper')}>
                 <div className={cx('header')}>
-                    <Link className={cx('logo')} to={paths.Home}>
-                        <img src={logo.logoLOL} alt="Error Image" />
+                    <Link className={cx('logo')} to={paths.home}>
+                        <img src={logo.logoLOL} alt="Error" />
                     </Link>
                     <button className={cx('close-btn')} onClick={() => setShowSidebar(false)}>
                         <FontAwesomeIcon icon={faXmark} />
@@ -85,10 +85,10 @@ function Sidebar() {
                     </button>
                 </div>
                 <div className={cx('items')}>
-                    <Link className={cx('item')} onClick={() => setShowSidebar(false)} to={paths.Game}>
+                    <Link className={cx('item')} onClick={() => setShowSidebar(false)} to={paths.game}>
                         <span>GAME</span>
                     </Link>
-                    <Link className={cx('item')} onClick={() => setShowSidebar(false)} to={paths.Champions}>
+                    <Link className={cx('item')} onClick={() => setShowSidebar(false)} to={paths.champions}>
                         <span>CHAMPIONS</span>
                     </Link>
                     <div className={cx('item')} onClick={() => handleItemBtn(newsMenuRef, newsMenuIconRef)}>
@@ -130,7 +130,7 @@ function Sidebar() {
                             </Link>
                         </div>
                     </div>
-                    <Link className={cx('item')} onClick={() => setShowSidebar(false)} to={paths.PatchNotes}>
+                    <Link className={cx('item')} onClick={() => setShowSidebar(false)} to={paths.patchNotes}>
                         <span>PATCH NOTES</span>
                     </Link>
                     <div className={cx('item')} onClick={() => handleItemBtn(discoverMenuRef, discoverMenuIconRef)}>
@@ -160,22 +160,22 @@ function Sidebar() {
                             </Link>
                         </div>
                     </div>
-                    <Link className={cx('item')} onClick={() => setShowSidebar(false)} to={paths.Champions}>
+                    <Link className={cx('item')} onClick={() => setShowSidebar(false)} to={paths.champions}>
                         <span>
                             ESPORTS <FontAwesomeIcon className={cx('item-menu-icon')} icon={faPaperclip} />
                         </span>
                     </Link>
-                    <Link className={cx('item')} onClick={() => setShowSidebar(false)} to={paths.Champions}>
+                    <Link className={cx('item')} onClick={() => setShowSidebar(false)} to={paths.champions}>
                         <span>
                             UNIVERSE <FontAwesomeIcon className={cx('item-menu-icon')} icon={faPaperclip} />
                         </span>
                     </Link>
-                    <Link className={cx('item')} onClick={() => setShowSidebar(false)} to={paths.Champions}>
+                    <Link className={cx('item')} onClick={() => setShowSidebar(false)} to={paths.champions}>
                         <span>
                             SHOP <FontAwesomeIcon className={cx('item-menu-icon')} icon={faPaperclip} />
                         </span>
                     </Link>
-                    <Link className={cx('item')} onClick={() => setShowSidebar(false)} to={paths.Champions}>
+                    <Link className={cx('item')} onClick={() => setShowSidebar(false)} to={paths.champions}>
                         <span>
                             SUPPORT <FontAwesomeIcon className={cx('item-menu-icon')} icon={faPaperclip} />
                         </span>
