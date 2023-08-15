@@ -1,12 +1,12 @@
-import styles from './ChampionInfo.module.scss';
-import classNames from 'classnames/bind';
-import { useParams } from 'react-router-dom';
-
-const cx = classNames.bind(styles);
+import Overview from '../../components/ChampionInfo/Overview';
+import { Fragment } from 'react';
 
 function ChampionInfo() {
-    const { name } = useParams();
-    return <div className={cx('wrapper')}>{name}</div>;
+    return (
+        <Fragment>
+            <Overview />
+        </Fragment>
+    );
 }
 
 export default ChampionInfo;

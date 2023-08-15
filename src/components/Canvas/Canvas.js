@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 
 const cx = classNames.bind(styles);
 
-function Canvas({ draw, btnAnimation, imgAnimation }) {
+function Canvas({ draw, btnAnimation, imgAnimation, normal }) {
     const ref = useCanvas(draw);
-    return <canvas ref={ref} className={cx({ btnAnimation, imgAnimation })}></canvas>;
+    return <canvas ref={ref} className={cx({ btnAnimation, imgAnimation, normal })}></canvas>;
 }
 
 Canvas.propTypes = {

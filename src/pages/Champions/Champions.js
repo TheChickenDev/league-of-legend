@@ -1,12 +1,13 @@
 import Highlights from '../../components/Champions/Highlights';
 import Search from '../../components/Champions/Search';
+import { Fragment } from 'react';
 
 function Champions() {
     return (
-        <div>
+        <Fragment>
             <Highlights />
             <Search />
-        </div>
+        </Fragment>
     );
 }
 

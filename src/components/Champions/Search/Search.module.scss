@@ -77,13 +77,24 @@
 }
 
 .search-popup-item {
+    font-size: 1.4rem;
     width: 100%;
     padding: 12px 24px;
+    text-align: center;
+    cursor: pointer;
 
+    &.focused,
     &:hover {
-        background-color: #f4f4f4;
-        cursor: pointer;
+        background-color: #c8c8c8;
     }
+}
+
+.search-popup-nofound-label {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.2rem;
+    text-align: center;
 }
 
 .roles-mobile {

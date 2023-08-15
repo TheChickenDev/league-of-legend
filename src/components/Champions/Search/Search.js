@@ -21,12 +21,15 @@ function Search() {
     const [input, setInput] = useState('');
 
     const [championsList, setChampionsList] = useState();
-    const [championsNameList, setChampionsNameList] = useState();
-    const [renderList, setRenderList] = useState();
+    const [championsNameList, setChampionsNameList] = useState([]);
+    const [renderList, setRenderList] = useState([]);
 
     const difficultiesPopupRef = useRef();
     const rolesPopupRef = useRef();
     const searchPopupRef = useRef();
+
+    const [searchPopupItemIndex, setSearchPopupItemIndex] = useState();
+    const [mouseOverPopupItem, setMouseOverPopupItem] = useState(false);
 
     // Search section
 
@@ -45,6 +48,7 @@ function Search() {
 
     function showSearchPopupMenu() {
         document.getElementById(cx('search-popup')).classList.add(cx('active'));
+        setSearchPopupItemIndex(0);
     }
 
     function hideSearchPopupMenu() {
@@ -272,15 +276,52 @@ function Search() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [input]);
 
+    useEffect(() => {
+        const searchItemFocused = document.querySelector(`[class="${cx('search-popup-item', 'focused')}"]`);
+        if (searchItemFocused) {
+            searchItemFocused.classList.remove(cx('focused'));
+        }
+
+        const searchItems = document.getElementsByClassName(cx('search-popup-item'));
+        if (searchItems[searchPopupItemIndex]) {
+            searchItems[searchPopupItemIndex].classList.add(cx('focused'));
+            if (searchItems[searchPopupItemIndex].offsetTop > searchPopupRef.current.scrollTop + 360)
+                searchPopupRef.current.scrollTop = searchItems[searchPopupItemIndex].offsetTop - 355;
+            else if (searchItems[searchPopupItemIndex].offsetTop < searchPopupRef.current.scrollTop)
+                searchPopupRef.current.scrollTop = searchItems[searchPopupItemIndex].offsetTop;
+        }
+    }, [searchPopupItemIndex]);
+
+    function handleSearchKeydown(e) {
+        switch (e.key) {
+            case 'ArrowDown':
+                if (searchPopupItemIndex < championsNameList.length - 1 && !mouseOverPopupItem)
+                    setSearchPopupItemIndex(searchPopupItemIndex + 1);
+                break;
+            case 'ArrowUp':
+                if (searchPopupItemIndex > 0 && !mouseOverPopupItem) setSearchPopupItemIndex(searchPopupItemIndex - 1);
+                break;
+            case 'Enter':
+                const name = document.getElementsByClassName(cx('search-popup-item'))[searchPopupItemIndex].innerHTML;
+                hideSearchPopupMenu();
+                filterChampions(name);
+                setInput(name);
+                break;
+            default:
+                break;
+        }
+    }
+
     return (
         <div className={cx('wrapper')}>
             <div className={cx('search-bar')}>
-                <div className={cx('search-input')} onClick={handleSearchInputClick}>
+                <div className={cx('search-input')} onClick={handleSearchInputClick} onKeyDown={handleSearchKeydown}>
                     <div className={cx('search-input-icon')}>
                         <FontAwesomeIcon icon={faMagnifyingGlass} />
                     </div>
                     <input
                         value={input}
+                        autoComplete="off"
                         id={cx('search-input')}
                         className={cx('input')}
                         type="text"
@@ -288,16 +329,23 @@ function Search() {
                         onChange={handleInput}
                     />
                     <div id={cx('search-popup')} ref={searchPopupRef}>
-                        {(championsNameList &&
+                        {(championsNameList.length > 0 &&
                             championsNameList.map((champ, index) => (
                                 <div
                                     className={cx('search-popup-item')}
                                     key={index}
                                     onClick={handleSearchPopupItemClick}
+                                    onMouseEnter={() => {
+                                        setMouseOverPopupItem(true);
+                                        setSearchPopupItemIndex(index);
+                                    }}
+                                    onMouseLeave={() => {
+                                        setMouseOverPopupItem(false);
+                                    }}
                                 >
                                     {champ}
                                 </div>
-                            ))) || <div className={cx('search-popup-item')}>NO CHAMPION FOUNDED</div>}
+                            ))) || <div className={cx('search-popup-nofound-label')}>NO CHAMPION FOUND</div>}
                     </div>
                 </div>
                 <div className={cx('roles-pc')}>
