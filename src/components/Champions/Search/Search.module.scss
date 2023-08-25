@@ -105,6 +105,12 @@
     align-items: center;
     position: relative;
     cursor: pointer;
+
+    &:hover {
+        #roles-mobile-icon {
+            transform: translateX(4px);
+        }
+    }
 }
 
 #roles-mobile-title {
@@ -198,7 +204,7 @@
         height: 100%;
     }
 
-    &:hover .difficulties-icon {
+    &:hover #difficulties-icon {
         transform: translateX(4px);
     }
 
@@ -270,7 +276,7 @@
     color: #c2902d;
     font-size: 1.4rem;
     margin-left: 8px;
-    transition: linear 0.2s, color linear 0.2s;
+    transition: transform linear 0.2s, color linear 0.2s;
 
     &.active {
         transform: rotate(180deg);

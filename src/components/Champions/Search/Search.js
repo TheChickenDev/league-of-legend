@@ -1,15 +1,10 @@
 import styles from './Search.module.scss';
 import classNames from 'classnames/bind';
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-import video from '../../../assets/videos/homepage/ss2020_lux_sylas_1920x1080.mp4';
-import Button from '../../Button';
-import { paths } from '../../../routes';
+import * as api from '../../../apiServices/championsServices';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleDown, faMagnifyingGlass, faXmarkCircle } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 
 const cx = classNames.bind(styles);
 
@@ -210,49 +205,13 @@ function Search() {
     // API
 
     useEffect(() => {
-        axios
-            .get('http://ddragon.leagueoflegends.com/cdn/13.15.1/data/en_US/champion.json')
-            .then((response) => {
-                setChampionsList(Object.entries(response.data.data));
-                setRenderList(Object.keys(response.data.data));
-                setChampionsNameList(Object.keys(response.data.data));
+        api.search()
+            .then((data) => {
+                setChampionsList(Object.entries(data));
+                setRenderList(Object.keys(data));
+                setChampionsNameList(Object.keys(data));
             })
-            .catch((error) => {
-                console.error(error);
-            });
-    }, []);
-
-    // Video
-    const contentRef = useRef();
-    const videoBtnRef = useRef();
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-        ScrollTrigger.create({
-            trigger: contentRef.current,
-            toggleActions: 'restart reverse none none',
-            start: 'top 100%',
-            end: 'bottom 30%',
-            scrub: true,
-            toggleClass: cx('active'),
-        });
-
-        ScrollTrigger.create({
-            trigger: videoBtnRef.current,
-            toggleActions: 'restart reverse none none',
-            start: 'top 100%',
-            end: 'bottom 100%',
-            scrub: true,
-            toggleClass: cx('active1st'),
-        });
-
-        ScrollTrigger.create({
-            trigger: videoBtnRef.current,
-            toggleActions: 'restart reverse none none',
-            start: 'top 104%',
-            end: 'bottom 104%',
-            scrub: true,
-            toggleClass: cx('active2nd'),
-        });
+            .catch((error) => console.log(error));
     }, []);
 
     // Search
@@ -510,16 +469,6 @@ function Search() {
                                 </div>
                             </Link>
                         ))}
-                </div>
-            </div>
-            <div className={cx('video')}>
-                <video autoPlay muted loop>
-                    <source src={video} />
-                </video>
-                <div ref={videoBtnRef} className={cx('video-btn')}>
-                    <Button blue big blackText to={paths.game}>
-                        PLAY FOR FREE
-                    </Button>
                 </div>
             </div>
         </div>

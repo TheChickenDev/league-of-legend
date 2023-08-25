@@ -4,6 +4,7 @@ import Skins from '../../components/HomePage/Skins';
 import Gamemodes from '../../components/HomePage/Gamemodes';
 import Gameplay from '../../components/HomePage/Gameplay';
 import Featured from '../../components/HomePage/Featured';
+import FooterVideo from '../../components/FooterVideo';
 import { Fragment } from 'react';
 
 function Home() {
@@ -15,6 +16,7 @@ function Home() {
             <Gamemodes />
             <Gameplay />
             <Featured />
+            <FooterVideo />
         </Fragment>
     );
 }

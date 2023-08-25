@@ -3,8 +3,6 @@ import classNames from 'classnames/bind';
 import images from '../../../assets/imgs/homepage/featured';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import video from '../../../assets/videos/homepage/ss2020_lux_sylas_1920x1080.mp4';
-import Button from '../../Button';
 import { paths } from '../../../routes';
 import { useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,7 +13,7 @@ const cx = classNames.bind(styles);
 
 function Featured() {
     const contentRef = useRef();
-    const videoBtnRef = useRef();
+
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
         ScrollTrigger.create({
@@ -25,24 +23,6 @@ function Featured() {
             end: 'bottom 30%',
             scrub: true,
             toggleClass: cx('active'),
-        });
-
-        ScrollTrigger.create({
-            trigger: videoBtnRef.current,
-            toggleActions: 'restart reverse none none',
-            start: 'top 100%',
-            end: 'bottom 100%',
-            scrub: true,
-            toggleClass: cx('active1st'),
-        });
-
-        ScrollTrigger.create({
-            trigger: videoBtnRef.current,
-            toggleActions: 'restart reverse none none',
-            start: 'top 104%',
-            end: 'bottom 104%',
-            scrub: true,
-            toggleClass: cx('active2nd'),
         });
     }, []);
 
@@ -77,16 +57,6 @@ function Featured() {
                         <div></div>
                     </div>
                 </Link>
-            </div>
-            <div className={cx('video')}>
-                <video autoPlay muted loop>
-                    <source src={video} />
-                </video>
-                <div ref={videoBtnRef} className={cx('video-btn')}>
-                    <Button blue big blackText to={paths.game}>
-                        PLAY FOR FREE
-                    </Button>
-                </div>
             </div>
         </div>
     );
